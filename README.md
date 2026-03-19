@@ -2,7 +2,7 @@
 
 Tool available at: https://towers-d.github.io/NCL-Pauper-Top-8-Tool/
 
-Entirely local run website that will generate Round 1 pairings based on the formula below (see #Pairings).
+Entirely locally run website that will generate Round 1 pairings based on the formula below (see #Formula).
 
 This is to guarentee that the top-4 players in the league will randomly play against the bottom 4.
 

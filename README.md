@@ -18,9 +18,10 @@ This is to guarentee that the top-4 players in the league will randomly play aga
 The winner of Group A will play against the winner of Group C.
 The winner of Group B will play against the winner of Group D.
 
+```
 Group A                               Group B
         \                           /
           SemiAC -> Final <- SemiBD
         /                           \
 Group C                               Group D
-          
+```

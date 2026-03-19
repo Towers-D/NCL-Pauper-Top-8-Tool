@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NCL Pauper Bracket Generator</title>
+        <link rel="stylesheet" href="main.css" />
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form>
+            <label for="first">First:</label>
+            <input type="text" id="first" ><br>
+
+            <label for="second">Second:</label>
+            <input type="text" id="second" ><br>
+
+            <label for="third">Third:</label>
+            <input type="text" id="third"><br>
+
+            <label for="fourth">Fourth:</label>
+            <input type="text" id="fourth"><br>
+
+            <label for="fifth">Fifth:</label>
+            <input type="text" id="fifth"><br>
+
+            <label for="sixth">Sixth:</label>
+            <input type="text" id="sixth"><br>
+
+            <label for="seventh">Seventh:</label>
+            <input type="text" id="seventh"><br>
+
+            <label for="eigth">Eight:</label>
+            <input type="text" id="eigth"><br>
+          </form>
+          <br/>
+
+          <button onclick="genBracket()"> Generate </button>
+
+          <br/>
+          <br/>
+          <br/>
+
+          <div id="tournament">
+            <div id="round-one" class = "rounds">
+                <div class = "matches">
+                    <div class="match", id="groupA">
+                        <input type="text" id="A1">
+                        <input type="checkbox" id="A1C" onclick="matchWin('A1', 'A2C', 'semi11')"/><br>
+
+                        <p> Vs. </p>
+
+                        <input type="text" id="A2">
+                        <input type="checkbox" id="A2C" onclick="matchWin('A2', 'A1C', 'semi11')"/><br>
+                    </div>
+                    <br/>
+                    <div class="match", id="groupC">
+                        <input type="text" id="C1">
+                        <input type="checkbox" id="C1C" onclick="matchWin('C1', 'C2C', 'semi12')"/><br>
+
+                        <p> Vs. </p>
+
+                        <input type="text" id="C2">
+                        <input type="checkbox" id="C2C" onclick="matchWin('C1', 'C1C', 'semi12')"/><br>
+                    </div>
+                    <br/>
+                    <div class="match", id="groupB">
+                        <input type="text" id="B1">
+                        <input type="checkbox" id="B1C" onclick="matchWin('B1', 'B2C', 'semi21')"/><br>
+
+                        <p> Vs. </p>
+
+                        <input type="text" id="B2">
+                        <input type="checkbox" id="B2C" onclick="matchWin('B2', 'B1C', 'semi21')"/><br>
+                    </div>
+                    <br/>
+                    <div class="match", id="groupD">
+                        <input type="text" id="D1">
+                        <input type="checkbox" id="D1C" onclick="matchWin('D1', 'D2C', 'semi22')"/><br>
+
+                        <p> Vs. </p>
+
+                        <input type="text" id="D2">
+                        <input type="checkbox" id="D2C" onclick="matchWin('D2', 'D1C', 'semi22')"/><br>
+                    </div>
+                </div>
+            </div>
+
+            <div id="round-two" class = "rounds">
+                <div class = "matches">
+                    <div class="match", id="semi1">
+                        <input type="text" id="semi11"/>
+                        <input type="checkbox" id="semi11C" onclick="matchWin('semi11', 'semi12C', 'F1')"/><br>
+
+                        <p> Vs. </p>
+
+                        <input type="text" id="semi12">
+                        <input type="checkbox" id="semi12C" onclick="matchWin('semi12', 'semi11C', 'F1')"/><br>
+                    </div>
+                    <br/>
+                    <div class="match", id="semi2">
+                        <input type="text" id="semi21">
+                        <input type="checkbox" id="semi21C" onclick="matchWin('semi21', 'semi22C', 'F2')"/><br>
+
+                        <p> Vs. </p>
+
+                        <input type="text" id="semi22">
+                        <input type="checkbox" id="semi22C" onclick="matchWin('semi22', 'semi21C', 'F2')"/><br>
+                    </div>
+                </div>
+            </div>
+
+            <div id="round-three" class = "rounds">
+                <div class = "matches">
+                    <div class="match", id="finals">
+                        <input type="text" id="F1">
+                        <input type="checkbox" id="F1C" onclick="declareWinner('F1', 'F2C')"/><br>
+
+                        <p> Vs. </p>
+
+                        <input type="text" id="F2">
+                        <input type="checkbox" id="F2C" onclick="declareWinner('F2', 'F1C')"/><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p>
+                The winner is:
+            </p>
+            <p id="winner">
+
+            </p>
+        </div>
+
+          <!--Scripts-->
+          <script src="assets/jquery.min.js"></script>
+          <script src="assets/bracket_gen.js"></script>
+          <script src="assets/run_bracket.js"></script>
+    </body>
+</html>

@@ -6,40 +6,46 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <form>
-            <label for="first">First:</label>
-            <input type="text" id="first" ><br>
+        <div id="rankings">
+            <div class = "rank">
+                <div class = "pos">First:</div>
+                <input type="text" id="first" ><br>
+            </div>
+            <div class = "rank">
+                <div class = "pos">Second:</div>
+                <input type="text" id="second" ><br>
+            </div>
+            <div class = "rank">
+                <div class = "pos">Third:</div>
+                <input type="text" id="third" ><br>
+            </div>
+            <div class = "rank">
+                <div class = "pos">Fourth:</div>
+                <input type="text" id="fourth" ><br>
+            </div>
+            <div class = "rank">
+                <div class = "pos">Fifth:</div>
+                <input type="text" id="fifth" ><br>
+            </div>
+            <div class = "rank">
+                <div class = "pos">Sixth:</div>
+                <input type="text" id="sixth" ><br>
+            </div>
+            <div class = "rank">
+                <div class = "pos">Seventh:</div>
+                <input type="text" id="seventh" ><br>
+            </div>
+            <div class = "rank">
+                <div class = "pos">Eigth:</div>
+                <input type="text" id="eigth" ><br>
+            </div>
 
-            <label for="second">Second:</label>
-            <input type="text" id="second" ><br>
+            <button id= "gen" onclick="genBracket()"> Generate </button>
+        </div>
 
-            <label for="third">Third:</label>
-            <input type="text" id="third"><br>
+        
 
-            <label for="fourth">Fourth:</label>
-            <input type="text" id="fourth"><br>
-
-            <label for="fifth">Fifth:</label>
-            <input type="text" id="fifth"><br>
-
-            <label for="sixth">Sixth:</label>
-            <input type="text" id="sixth"><br>
-
-            <label for="seventh">Seventh:</label>
-            <input type="text" id="seventh"><br>
-
-            <label for="eigth">Eight:</label>
-            <input type="text" id="eigth"><br>
-          </form>
-          <br/>
-
-          <button onclick="genBracket()"> Generate </button>
-
-          <br/>
-          <br/>
-          <br/>
-
-          <div id="tournament">
+        <div id="tournament">
             <div id="round-one" class = "rounds">
                 <div class = "matches">
                     <div class="match", id="groupA">
@@ -123,18 +129,20 @@
             </div>
         </div>
 
-        <div>
-            <p>
+        <div id="finaltext">
+            <p id="preamble">
                 The winner is:
             </p>
-            <p id="winner">
-
-            </p>
+            <div id="shadowbox">
+                <p id="winner" class="rainbow rainbow_text_animated"> 
+                    
+                </p>
+            </div>
         </div>
 
-          <!--Scripts-->
-          <script src="assets/jquery.min.js"></script>
-          <script src="assets/bracket_gen.js"></script>
-          <script src="assets/run_bracket.js"></script>
+        <!--Scripts-->
+        <script src="assets/jquery.min.js"></script>
+        <script src="assets/bracket_gen.js"></script>
+        <script src="assets/run_bracket.js"></script>
     </body>
 </html>

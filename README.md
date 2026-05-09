@@ -21,7 +21,7 @@ The winner of Group B will play against the winner of Group D.
 ```
 Group A                               Group B
         \                           /
-          SemiAC -> Final <- SemiBD
+       Semi [AC] -> Final <- Semi [BD]
         /                           \
 Group C                               Group D
 ```

@@ -1,14 +1,22 @@
+// Taken from Matt Hyde here: https://stackoverflow.com/a/48226843
+function sanitize(string) {
+    const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#x27;',
+        "/": '&#x2F;',
+    };
+    const reg = /[&<>"'/]/ig;
+    return string.replace(reg, (match)=>(map[match]));
+  }
+
 function genBracket() {
-    players = [
-        [1, $('#first').val(), false],
-        [2, $('#second').val(), false],
-        [3, $('#third').val(), false],
-        [4, $('#fourth').val(), false],
-        [5, $('#fifth').val(), false],
-        [6, $('#sixth').val(), false],
-        [7, $('#seventh').val(), false],
-        [8, $('#eigth').val(), false]
-    ]
+    let players = [];
+    $('#rankings').find("input").each(function () {
+        players.push([players.length + 1, sanitize($(this).val()), false])
+    });
     
 
     let groupA = [getPlayer(players, 1)];
@@ -62,12 +70,6 @@ function genBracket() {
 
     $("#D1").val(groupD[0][1])
     $("#D2").val(groupD[1][1])
-
-    console.log(groupA);
-    console.log(groupB);
-    console.log(groupC);
-    console.log(groupD);
-
 }
 
 function getPlayer(players, position) {
